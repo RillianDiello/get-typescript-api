@@ -1,10 +1,17 @@
 import { HttpEnumStatusCode } from "../../protocols";
 import { CreateUserController } from "./create-user";
 import { ICreateUserRepository, ICreateUserParams } from "./protocols";
+import { IUser } from "../../../models/user";
 
 class CreateUserRepositoryMock implements ICreateUserRepository {
-  async createUser(params: ICreateUserParams): Promise<any> {
-    return Promise.resolve(params);
+  async createUser(params: ICreateUserParams): Promise<IUser> {
+    return Promise.resolve({
+      id: "user-id",
+      firstName: params.firstName || "John",
+      lastName: params.lastName || "Doe",
+      email: "john.doe@example.com",
+      password: params.password || "password123",
+    });
   }
 }
 
@@ -34,6 +41,7 @@ describe("CreateUserController", () => {
   it("should create user and return 201 if input is valid", async () => {
     const controller = new CreateUserController(new CreateUserRepositoryMock());
     const validBody = {
+      id: "user-id",
       firstName: "John",
       lastName: "Doe",
       email: "john.doe@example.com",
@@ -46,8 +54,8 @@ describe("CreateUserController", () => {
 
   it("should return 500 if an error occurs during user creation", async () => {
     const errorMockRepository: ICreateUserRepository = {
-      async createUser(params: ICreateUserParams): Promise<any> {
-        throw new Error("Simulated error");
+      async createUser(params: ICreateUserParams): Promise<IUser> {
+        throw new Error(`Simulated error with params: ${params}`);
       },
     };
 
