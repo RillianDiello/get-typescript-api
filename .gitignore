@@ -3,3 +3,4 @@ node_modules/
 built/*
 tests/cases/rwc/*
 tests/cases/perf/*
+.env
