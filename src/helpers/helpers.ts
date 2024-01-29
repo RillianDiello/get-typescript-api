@@ -1,10 +1,13 @@
 import { HttpEnumStatusCode, IHttpResponse } from "../controllers/protocols";
+import { IUser } from "../models/user";
 
-export const ok = <T>(body: any): IHttpResponse<T> => ({
+export const ok = <T extends string | IUser | IUser[]>(
+  body: T
+): IHttpResponse<T> => ({
   statusCode: HttpEnumStatusCode.OK,
   body,
 });
-export const created = <T>(body: any): IHttpResponse<T> => ({
+export const created = <T extends IUser>(body: T): IHttpResponse<T> => ({
   statusCode: HttpEnumStatusCode.CREATED,
   body,
 });
