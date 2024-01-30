@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
-    "start:test": "npx jest"
+    "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts",
+    "test": "npx jest"
   },
   "keywords": [],
   "author": "",
