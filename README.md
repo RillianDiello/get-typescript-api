@@ -45,7 +45,7 @@ User {
 ## Plus
 
 - Docker to mongoDB
-- Validator NodeJS
+- Node Validator
 - ESLint
 
 # Run
@@ -60,4 +60,6 @@ Also, it's important to note that I used `docker-compose` to manage my Docker fi
 
 # References
 
-Original repository [Original repository ](https://github.com/felipemotarocha/users-typescript-api)
+[Original repository ](https://github.com/felipemotarocha/users-typescript-api)
+
+[Video](https://youtu.be/gU3kp7Aw0JI)
