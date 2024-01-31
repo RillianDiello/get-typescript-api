@@ -47,11 +47,12 @@ User {
 - Docker to mongoDB
 - ESLint
 
-## Runs
+## Run
 
-This project can be run with Docker, but if you prefer, you can use Mongo Atlas, that it's a cloud focused on Mongo DB. I used docker at my location and to deploy I am using Mongo Atlas.
-If you choose Atlas, you will need to change the database settings in the .env file, but everything else will work the same.
+This project was developed to run with Docker. However, for those who prefer an alternative, it is possible to use Mongo Atlas, a cloud platform specialized in MongoDB. In my local configuration I used Docker, while for deployment I opted for Mongo Atlas.
 
-Another note is that I'm using Yarn as my package manager and I run the project using `yarn dev` or `yarn test` . You can check this in package.json
+If you decide to use Atlas, be sure to modify the database settings in the .env file. The remaining general functionality and operation of the project will remain consistent.
 
-Another observation is that I am using `docker-composer commands` to run my docker files. And before running the project, you need to bring the database container online. Otherwise, when trying to run the test option, for example. You will get some errors when tests try to access the database
+Another note is that I chose Yarn as the package manager for this project. To run the project, you can use `yarn dev` or `yarn test` and you can find these commands specified in the package.json file.
+
+Also, it's important to note that I used `docker-compose` to manage my Docker files. Before starting the project, make sure the database container is up and running. Failure to do so may result in errors, especially when trying to perform certain functionality, such as running tests that depend on database access.
