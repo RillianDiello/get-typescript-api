@@ -6,7 +6,7 @@ The main idea was to create a project that is interesting for students who are s
 
 ## Technologies
 
-- NodeJs: NodeJS is a server-side JavaScript execution environment. You can seamlessly use NPM alongside the Yarn package manager with just a few command adjustments.
+- NodeJs: is a server-side JavaScript execution environment. You can seamlessly use NPM alongside the Yarn package manager with just a few command adjustments.
 
 - Express: is a framework for building APIs that provides a convenient abstraction for NodeJS's http module. It allows for easy incorporation of routes, routers, middlewares, templates, engines, and also features a robust error-handling mechanism
 
