@@ -47,7 +47,7 @@ User {
 - Docker to mongoDB
 - ESLint
 
-## Run
+# Run
 
 This project was developed to run with Docker. However, for those who prefer an alternative, it is possible to use Mongo Atlas, a cloud platform specialized in MongoDB. In my local configuration I used Docker, while for deployment I opted for Mongo Atlas.
 
@@ -56,3 +56,7 @@ If you decide to use Atlas, be sure to modify the database settings in the .env 
 Another note is that I chose Yarn as the package manager for this project. To run the project, you can use `yarn dev` or `yarn test` and you can find these commands specified in the package.json file.
 
 Also, it's important to note that I used `docker-compose` to manage my Docker files. Before starting the project, make sure the database container is up and running. Failure to do so may result in errors, especially when trying to perform certain functionality, such as running tests that depend on database access.
+
+# References
+
+Original repository [Original repository ](https://github.com/felipemotarocha/users-typescript-api)
