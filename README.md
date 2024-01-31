@@ -45,6 +45,7 @@ User {
 ## Plus
 
 - Docker to mongoDB
+- Validator NodeJS
 - ESLint
 
 # Run
