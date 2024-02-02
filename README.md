@@ -58,8 +58,34 @@ Another note is that I chose Yarn as the package manager for this project. To ru
 
 Also, it's important to note that I used `docker-compose` to manage my Docker files. Before starting the project, make sure the database container is up and running. Failure to do so may result in errors, especially when trying to perform certain functionality, such as running tests that depend on database access.
 
+## Using Docker
+
+### Running
+
+`docker-composer up -d`
+
+`yarn dev`
+
+To run the tests you can use:
+
+`yarn test`
+
+This command will only be executed once. It is also possible to execute commands such as:
+
+`yarn test --coverage`
+
+This command will generate an coverage report about your code with your tests. It's interesting because this report it's based on code interruptions as if, while, for etc. So if you have simple 1 IF condition in a class for example. The test will considere that you need minimally two tests do coverage 100% conditions, one where the IF condition it's true, and other where the IF condition it's false.
+
+`yarn test --watch`
+
+This command will keep a tests tab open in your terminal, similar to what Nodemon does. So according you change and save something the tests will be re-executed.
+
 # References
 
 [Original repository ](https://github.com/felipemotarocha/users-typescript-api)
 
 [Video](https://youtu.be/gU3kp7Aw0JI)
+
+[Jest](https://jestjs.io/)
+
+[Mongo Atlas](https://www.mongodb.com/docs/atlas/tutorial/connect-to-your-cluster/)
