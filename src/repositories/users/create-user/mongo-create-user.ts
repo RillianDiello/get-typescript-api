@@ -4,7 +4,7 @@ import {
 } from "../../../controllers/users/create-user/protocols";
 import { MongoClient } from "../../../database/mongo";
 import { IUser } from "../../../models/user";
-import { MongoUser } from "../../mongo-protocols";
+import { MongoUser, formatUser } from "../../mongo-protocols";
 
 export class MongoCreateUserRepository implements ICreateUserRepository {
   async createUser(params: ICreateUserParams): Promise<IUser> {
@@ -20,7 +20,6 @@ export class MongoCreateUserRepository implements ICreateUserRepository {
       throw new Error("User not created");
     }
 
-    const { _id, ...rest } = user;
-    return { id: _id.toHexString(), ...rest };
+    return formatUser(user);
   }
 }

@@ -1,7 +1,7 @@
 import { IGetUsersRepository } from "../../../controllers/users/get-users/protocols";
 import { MongoClient } from "../../../database/mongo";
 import { IUser } from "../../../models/user";
-import { MongoUser } from "../../mongo-protocols";
+import { MongoUser, formatUser } from "../../mongo-protocols";
 
 export class MongoGetUsersRepository implements IGetUsersRepository {
   async getUsers(): Promise<IUser[]> {
@@ -9,9 +9,9 @@ export class MongoGetUsersRepository implements IGetUsersRepository {
       .collection<MongoUser>("users")
       .find({})
       .toArray();
-    return users.map(({ _id, ...rest }) => ({
-      ...rest,
-      id: _id.toHexString(),
-    }));
+
+    return users.map((user) => {
+      return formatUser(user);
+    });
   }
 }
