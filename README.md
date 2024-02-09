@@ -92,4 +92,4 @@ This command will keep a tests tab open in your terminal, similar to what Nodemo
 
 [SOLID](https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530)
 
-[CommonsJS] (https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules)
+[CommonsJS](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Modules)
